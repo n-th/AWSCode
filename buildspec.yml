@@ -23,6 +23,6 @@ phases:
 
 artifacts:
   files:
-    - "*"
+    - "**/*"
   discard-path: no
   base-directory: dist
