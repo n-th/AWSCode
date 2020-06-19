@@ -5,7 +5,7 @@ phases:
     commands:
       - echo Installing Node 12
       - curl -sL https://deb.nodesource.com/setup_12.x | bash -
-      - ap intsll -y nodejs
+      - apt install -y nodejs
       - echo Installing YARN
       - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
       - echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
@@ -14,15 +14,15 @@ phases:
     commands:
       - echo Installing dependencies
       - yarn
-    build:
-      commands:
-        - echo Liting
-        - yarn lint
-        - echo Building
-        - yarn build
+  build:
+    commands:
+      - echo Liting
+      - yarn lint
+      - echo Building
+      - yarn build
 
-artifacs:
+artifacts:
   files:
-    - "**/*"
+    - "*"
   discard-path: no
   base-directory: dist
