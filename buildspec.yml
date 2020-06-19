@@ -25,4 +25,5 @@ artifacts:
   files:
     - "**/*"
   discard-path: yes
-  base-directory: dist
+  base-directory: dist/
+  name: "/"
